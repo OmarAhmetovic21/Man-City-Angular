@@ -1,0 +1,23 @@
+<div class="wrapper">
+    <div class="page-header clear-filter" >
+      <div class="page-header-image rellax-header" data-rellax-speed="-7" style="background-image: url('assets/img/header.jpg');">
+          
+      </div>
+        <div class="container">
+          <div class="content-center brand">
+              <h1 *ngIf="isDesktopDevice" class="h1-seo" style="color: white"> <b>Welcome to Manchester City</b></h1>
+              <h3 *ngIf="isDesktopDevice" style="color: white"fbc><b>We are the current English and European Champions</b></h3>
+  
+              <h2 *ngIf="!isDesktopDevice" class="h1-seo" style="color: white"> <b>Welcome to Manchester City</b></h2>
+              <h4 *ngIf="!isDesktopDevice" style="color: white"><b>We are the current English and European Champions</b></h4>
+          </div>
+        </div>
+    </div>
+  
+    <div class="main">
+      
+        <app-basicelements></app-basicelements>
+  
+       
+       
+    </div>
