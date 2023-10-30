@@ -4,6 +4,7 @@ import { DOCUMENT } from '@angular/common';
 import { Location } from '@angular/common';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { filter, Subscription } from 'rxjs';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @Component({
     selector: 'app-root',
