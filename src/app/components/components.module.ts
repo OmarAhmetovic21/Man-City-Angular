@@ -8,6 +8,8 @@ import { RouterModule } from '@angular/router';
 
 import { BasicelementsComponent } from './basicelements/basicelements.component';
 import { ComponentsComponent } from './components.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { EventsComponent } from './events/events.component';
 
 @NgModule({
     imports: [
@@ -20,7 +22,9 @@ import { ComponentsComponent } from './components.component';
       ],
     declarations: [
         ComponentsComponent,
-        BasicelementsComponent
+        BasicelementsComponent,
+        AboutUsComponent,
+        EventsComponent
     ],
     exports:[ ComponentsComponent ]
 })
