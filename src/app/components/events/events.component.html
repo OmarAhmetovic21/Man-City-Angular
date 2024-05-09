@@ -1,1 +1,28 @@
-<p>events works!</p>
+<div class="wrapper">
+    <div class="page-header clear-filter" >
+        <div class="page-header-image rellax-header" data-rellax-speed="-7" style="background-image: url('assets/img/header3.jpg');">
+            
+        </div>
+          <div class="container">
+            <div class="content-center brand">
+                <h1 *ngIf="isDesktopDevice" class="h1-seo" style="color: white; margin-bottom: 25%;"> <b>Events</b></h1>
+                <h2 *ngIf="!isDesktopDevice" class="h1-seo" style="color: white; margin-bottom: 45%;"> <b>Events</b></h2>
+            </div>
+          </div>
+      </div>
+    
+      <div class="main">
+          
+        <div class="container">
+          <br> 
+          <div class="row">
+          <h3 class="title text-center" [ngClass]="isDesktopDevice ? 'col-9 aboutDesktop mx-auto' : 'col-12 mx-auto aboutMobile'">
+            Fixtures</h3>
+          </div>
+          <br> 
+        </div>
+     
+       
+    </div>
+    
+    </div>
