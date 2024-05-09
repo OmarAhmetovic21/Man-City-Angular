@@ -1,1 +1,38 @@
-<p>about-us works!</p>
+<div class="wrapper">
+<div class="page-header clear-filter" >
+    <div class="page-header-image rellax-header" data-rellax-speed="-7" style="background-image: url('assets/img/header2.jpg');">
+        
+    </div>
+      <div class="container">
+        <div class="content-center brand">
+            <h1 *ngIf="isDesktopDevice" class="h1-seo" style="color: white; margin-bottom: 27%;"> <b>About us</b></h1>
+            <h2 *ngIf="!isDesktopDevice" class="h1-seo" style="color: white; margin-bottom: 45%;"> <b>About us</b></h2>
+        </div>
+      </div>
+  </div>
+
+  <div class="main">
+      
+    <div class="container">
+      <br> 
+      <div class="row">
+      <h5 [ngClass]="isDesktopDevice ? 'col-9 aboutDesktop mx-auto' : 'col-12 mx-auto aboutMobile'">
+        Manchester City Football Club is a professional football club based in Manchester, 
+        England, that competes in the Premier League, the top flight of English football. 
+        Founded in 1880 as St. Mark's (West Gorton), they became Ardwick Association Football Club
+        in 1887 and Manchester City in 1894. <br>
+         The club's home ground is the City of Manchester Stadium 
+        in east Manchester, to which they moved in 2003, having played at Maine Road since 1923. 
+        Manchester City adopted their sky blue home shirts in 1894, the first season with the current name.<br>
+        Over the course of its history, the club has won nine league titles, seven FA Cups, 
+        eight League Cups, six FA Community Shields, one UEFA Champions League, one European Cup Winners' Cup, 
+        one UEFA Super Cup and one FIFA Club World Cup.</h5>
+      </div>
+      <br> 
+    </div>
+ 
+   
+</div>
+
+</div>
+

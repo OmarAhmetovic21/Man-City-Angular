@@ -10844,10 +10844,10 @@ Created using IcoMoon - icomoon.io
     }
     .navbar-collapse[data-color="orange"]:after {
         background: #f96332;
-        background: -webkit-linear-gradient(#f96332 0%, #000 80%);
-        background: -o-linear-gradient(#f96332 0%, #000 80%);
-        background: -moz-linear-gradient(#f96332 0%, #000 80%);
-        background: linear-gradient(#f96332 0%, #000 80%);
+        background: -webkit-linear-gradient(#007bff 0%, #000 80%);
+        background: -o-linear-gradient(#007bff 0%, #000 80%);
+        background: -moz-linear-gradient(#007bff 0%, #000 80%);
+        background: linear-gradient(#007bff 0%, #000 80%);
     }
     .navbar-collapse[data-color="red"]:after {
         background: #FF3636;
