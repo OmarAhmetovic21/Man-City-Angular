@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DeviceDetectorService } from 'ngx-device-detector';
 import * as Rellax from 'rellax';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-about-us',
@@ -9,7 +10,13 @@ import * as Rellax from 'rellax';
 })
 export class AboutUsComponent implements OnInit {
   isDesktopDevice: any;
-  constructor(private deviceService: DeviceDetectorService) { }
+  constructor(private deviceService: DeviceDetectorService, 
+              private router: Router
+  ) { }
+
+  open(page: any) {
+    this.router.navigateByUrl('/' + page);
+}
 
   ngOnInit(): void {
     this.isDesktopDevice = this.deviceService.isDesktop();

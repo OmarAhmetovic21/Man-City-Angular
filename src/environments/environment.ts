@@ -5,6 +5,6 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost/ManCityBackend/'
+  apiUrl: 'http://localhost/ManCityBackend'
 };
 

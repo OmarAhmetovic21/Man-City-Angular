@@ -2,6 +2,7 @@ import { Component, OnInit, Renderer2, OnDestroy } from '@angular/core';
 import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
 import { NgbAccordionConfig } from '@ng-bootstrap/ng-bootstrap';
 import * as Rellax from 'rellax';
+import { Router } from '@angular/router';
 import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
@@ -35,10 +36,16 @@ export class ComponentsComponent implements OnInit, OnDestroy {
     state_icon_primary = true;
 
     constructor(private renderer : Renderer2, config: NgbAccordionConfig,
-                private deviceService: DeviceDetectorService) {
+                private deviceService: DeviceDetectorService,
+                private router: Router) {
         config.closeOthers = true;
         config.type = 'info';
     }
+
+    open(page: any) {
+        this.router.navigateByUrl('/' + page);
+    }
+    
     isWeekend(date: NgbDateStruct) {
         const d = new Date(date.year, date.month - 1, date.day);
         return d.getDay() === 0 || d.getDay() === 6;

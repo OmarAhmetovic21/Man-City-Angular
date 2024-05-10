@@ -18,4 +18,5 @@ export class FixturesService {
     headers.set('Content-Type', 'application/json; charset=utf-8');  
     return this.httpClient.get(this.API_SERVER + '/getFixtures.php',{headers: headers});
   }
+
 }

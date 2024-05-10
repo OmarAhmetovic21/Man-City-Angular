@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { DeviceDetectorService } from 'ngx-device-detector';
-import * as Rellax from 'rellax';
+import { Router } from '@angular/router';
+import { FixturesService } from 'app/services/fixtures-service/fixtures.service';
+import { DomSanitizer } from '@angular/platform-browser';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-events',
@@ -9,23 +12,38 @@ import * as Rellax from 'rellax';
 })
 export class EventsComponent implements OnInit {
   isDesktopDevice: any;
-  constructor(private deviceService: DeviceDetectorService) { }
+  getFixturesObservable: BehaviorSubject<any[]>;
+
+  constructor(private deviceService: DeviceDetectorService,
+              private router: Router,
+              private fixturesService: FixturesService,
+  ) 
+  { 
+    this.getFixturesObservable = new BehaviorSubject<any[]>([]);
+  }
 
   ngOnInit(): void {
     this.isDesktopDevice = this.deviceService.isDesktop();
-    var rellaxHeader = new Rellax('.rellax-header');
 
         var navbar = document.getElementsByTagName('nav')[0];
         navbar.classList.add('navbar-transparent');
         var body = document.getElementsByTagName('body')[0];
         body.classList.add('index-page');
+        this.getFixtures();
   }
 
-  ngOnDestroy(){
-    var navbar = document.getElementsByTagName('nav')[0];
-    navbar.classList.remove('navbar-transparent');
-    var body = document.getElementsByTagName('body')[0];
-    body.classList.remove('index-page');
+
+open(page: any) {
+  this.router.navigateByUrl('/' + page);
 }
+
+getFixtures() {
+  this.fixturesService.getFixtures().subscribe((data: any) => {
+    // resp.json().data
+    this.getFixturesObservable.next(data);
+    console.log(data);
+  })
+}
+
 
 }
