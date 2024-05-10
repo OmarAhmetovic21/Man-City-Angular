@@ -1,9 +1,12 @@
 <footer class="footer" data-background-color="black">
     <div class="container">
-        <div class="copyright">
+        <div class="copyright" style="float: left;">
             &copy;
           {{data | date: 'yyyy'}}, Designed by Omar Ahmetović
         </div>
+        <div class="copyright" style="float: right;">
+            <a [routerLink]="['login']"> <p>Login</p></a> 
+         </div>
     </div>
 </footer>
 
