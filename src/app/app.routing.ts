@@ -6,16 +6,16 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
 import { EventsComponent } from './components/events/events.component';
 import { ComponentsComponent } from './components/components.component';
 import { LandingComponent } from './examples/landing/landing.component';
-import { LoginComponent } from './examples/login/login.component';
 import { ProfileComponent } from './examples/profile/profile.component';
+import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes =[
     { path: '', redirectTo: 'index', pathMatch: 'full' },
     { path: 'index',                component: ComponentsComponent },
     { path: 'about-us',             component: AboutUsComponent },
     { path: 'events',             component: EventsComponent },
+    { path: 'login',       component: LoginComponent },
     { path: 'examples/landing',     component: LandingComponent },
-    { path: 'examples/login',       component: LoginComponent },
     { path: 'examples/profile',     component: ProfileComponent }
 ];
 

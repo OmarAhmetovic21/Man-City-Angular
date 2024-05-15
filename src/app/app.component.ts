@@ -13,6 +13,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 })
 export class AppComponent implements OnInit {
     private _router: Subscription;
+    displayFooter = true;
     @ViewChild(NavbarComponent) navbar: NavbarComponent;
 
     constructor( private renderer : Renderer2, private router: Router, @Inject(DOCUMENT,) private document: any, private element : ElementRef, public location: Location) {}
@@ -38,6 +39,14 @@ export class AppComponent implements OnInit {
                     navbar.classList.add('navbar-transparent');
                 }
             });
+        });
+
+        this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe((event: NavigationEnd) => {
+            if(event?.url ==='/login' || event?.url ==='/admin-page') {
+                this.displayFooter = false;
+             } else {
+                 this.displayFooter = true;
+             }
         });
     }
 }

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +11,7 @@ export class LoginComponent implements OnInit {
     focus;
     focus1;
 
-    constructor(private router: Router) { }
+    constructor() { }
 
     ngOnInit() {
         var body = document.getElementsByTagName('body')[0];
@@ -27,9 +26,6 @@ export class LoginComponent implements OnInit {
 
         var navbar = document.getElementsByTagName('nav')[0];
         navbar.classList.remove('navbar-transparent');
-    }
-    open(page: any) {
-        this.router.navigateByUrl('/' + page);
     }
 
 }

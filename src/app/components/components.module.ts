@@ -9,6 +9,7 @@ import { BasicelementsComponent } from './basicelements/basicelements.component'
 import { ComponentsComponent } from './components.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { EventsComponent } from './events/events.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
     imports: [
@@ -23,7 +24,8 @@ import { EventsComponent } from './events/events.component';
         ComponentsComponent,
         BasicelementsComponent,
         AboutUsComponent,
-        EventsComponent
+        EventsComponent,
+        LoginComponent
     ],
     exports:[ ComponentsComponent ]
 })
