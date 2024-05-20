@@ -10,6 +10,7 @@ import { ComponentsComponent } from './components.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { EventsComponent } from './events/events.component';
 import { LoginComponent } from './login/login.component';
+import { AdminPageComponent } from './admin-page/admin-page.component';
 
 @NgModule({
     imports: [
@@ -25,7 +26,8 @@ import { LoginComponent } from './login/login.component';
         BasicelementsComponent,
         AboutUsComponent,
         EventsComponent,
-        LoginComponent
+        LoginComponent,
+        AdminPageComponent
     ],
     exports:[ ComponentsComponent ]
 })
