@@ -12,10 +12,10 @@ import { FixturesService } from 'app/services/fixtures-service/fixtures.service'
 export class AddFixtureComponent implements OnInit {
 
   @Input() data: any;
-  HomeTeam: any;
-  AwayTeam: any;
-  Date: any;
-  Time: any;
+  team1: any;
+  team2: any;
+  date: any;
+  time: any;
   //media: any;
   id: any;
 
@@ -25,10 +25,10 @@ export class AddFixtureComponent implements OnInit {
 
   ngOnInit(): void {
     if(this.data){
-      this.HomeTeam = this.data.name;
-      this.AwayTeam= this.data.AwayTeam;
-      this.Date= this.data.Date;
-      this.Time= this.data.Time;
+      this.team1 = this.data.team1;
+      this.team2= this.data.team2;
+      this.date= this.data.date;
+      this.time= this.data.time;
       this.id= this.data.id;
     }
 
@@ -76,10 +76,10 @@ export class AddFixtureComponent implements OnInit {
 
   postOffers() {
     let data = {
-      HomeTeam: this.HomeTeam,
-      AwayTeam: this.AwayTeam,
-      Date: this.Date,
-      Time: this.Time,
+      team1: this.team1,
+      team2: this.team2,
+      date: this.date,
+      time: this.time,
       //media: this.media
     }
     
@@ -89,10 +89,10 @@ export class AddFixtureComponent implements OnInit {
 
   editOffer(){
     let post = {
-      HomeTeam: this.HomeTeam,
-      AwayTeam: this.AwayTeam,
-      Date: this.Date,
-      Time: this.Time,
+      team1: this.team1,
+      team2: this.team2,
+      date: this.date,
+      time: this.time,
       //media: this.media,
       id: this.data.id
     }  

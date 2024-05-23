@@ -22,7 +22,20 @@ export class FixturesService {
   public postFixtures(data: any): Observable<any>{
     const headers = new HttpHeaders();
     headers.set('Content-Type', 'application/json; charset=utf-8');  
-    return this.httpClient.post(this.API_SERVER + 'c/postFixtures.php', data, {headers: headers});
+    return this.httpClient.post(this.API_SERVER + '/postFixtures.php', data, {headers: headers});
+  }
+
+  public deleteFixtures(id: any) : Observable<any>{
+    const headers = new HttpHeaders();
+    headers.set('Content-Type', 'application/json; charset=utf-8');  
+    return this.httpClient.delete(this.API_SERVER + '/deleteOffers.php/'+id,{headers: headers});
+  }
+
+  public editFixtures(data:any, id:any): Observable<any>{
+    const headers = new HttpHeaders();
+    headers.set('Content-Type', 'application/json; charset=utf-8');  
+    return this.httpClient.put(this.API_SERVER + '/updateOffers.php/'+id, data,{headers: headers});
+
   }
 
 

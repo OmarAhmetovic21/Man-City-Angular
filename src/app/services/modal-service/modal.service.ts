@@ -15,7 +15,7 @@ export class ModalService {
         scrollable: true,
         windowClass: 'myCustomModalClass',
       });
-      /*modalRef.componentInstance.data = data;*/
+      //modalRef.componentInstance.data = data;
       return modalRef.result;
   }
 }
