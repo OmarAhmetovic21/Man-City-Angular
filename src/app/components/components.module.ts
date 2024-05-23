@@ -11,6 +11,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { EventsComponent } from './events/events.component';
 import { LoginComponent } from './login/login.component';
 import { AdminPageComponent } from './admin-page/admin-page.component';
+import { AddFixtureComponent } from './add-fixture/add-fixture.component';
 
 @NgModule({
     imports: [
@@ -27,7 +28,8 @@ import { AdminPageComponent } from './admin-page/admin-page.component';
         AboutUsComponent,
         EventsComponent,
         LoginComponent,
-        AdminPageComponent
+        AdminPageComponent,
+        AddFixtureComponent
     ],
     exports:[ ComponentsComponent ]
 })
