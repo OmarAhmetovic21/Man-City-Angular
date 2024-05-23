@@ -12,27 +12,29 @@ import { FixturesService } from 'app/services/fixtures-service/fixtures.service'
 export class AddFixtureComponent implements OnInit {
 
   @Input() data: any;
-  name: any;
-  price: any;
-  amount: any;
-  media: any;
+  HomeTeam: any;
+  AwayTeam: any;
+  Date: any;
+  Time: any;
+  //media: any;
   id: any;
+
 
   constructor(public activeModal: NgbActiveModal,
               private FixturesService: FixturesService) { }
 
   ngOnInit(): void {
     if(this.data){
-      this.name = this.data.name;
-      this.price= this.data.price;
-      this.amount= this.data.amount;
-      this.media= this.data.media;
+      this.HomeTeam = this.data.name;
+      this.AwayTeam= this.data.AwayTeam;
+      this.Date= this.data.Date;
+      this.Time= this.data.Time;
       this.id= this.data.id;
     }
 
   }
 
-  onChange = ($event: Event)=>{
+  /*onChange = ($event: Event)=>{
     const target = $event.target as HTMLInputElement;
     const file: File = (target.files as FileList)[0];
     console.log(file);
@@ -67,17 +69,18 @@ export class AddFixtureComponent implements OnInit {
     }
 
   }
-
+*/
   closeModal() {
     this.activeModal.close();
   }
 
   postOffers() {
     let data = {
-      name: this.name,
-      price: this.price,
-      amount: this.amount,
-      media: this.media
+      HomeTeam: this.HomeTeam,
+      AwayTeam: this.AwayTeam,
+      Date: this.Date,
+      Time: this.Time,
+      //media: this.media
     }
     
 
@@ -86,10 +89,11 @@ export class AddFixtureComponent implements OnInit {
 
   editOffer(){
     let post = {
-      name: this.name,
-      price: this.price,
-      amount: this.amount,
-      media: this.media,
+      HomeTeam: this.HomeTeam,
+      AwayTeam: this.AwayTeam,
+      Date: this.Date,
+      Time: this.Time,
+      //media: this.media,
       id: this.data.id
     }  
 

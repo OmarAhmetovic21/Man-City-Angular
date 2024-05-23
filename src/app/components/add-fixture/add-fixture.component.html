@@ -14,7 +14,7 @@
                 <input type="text" 
                 style="width: 100%; height:100%; background-color: #b8b5b5;;" 
                 maxlength="255" class="form-control"
-                 [(ngModel)]="name"/>
+                 [(ngModel)]="HomeTeam"/>
                 
             </div>
 
@@ -24,21 +24,31 @@
                 </h5>
                 <input type="text" style="width: 100%; height:100%; background-color: #b8b5b5;"
                  maxlength="255" class="form-control" 
-                 [(ngModel)]="price"/>
+                 [(ngModel)]="AwayTeam"/>
                 
             </div>
 
             <div class="col-12 mb-2" style="width: 100%; height:100%">
                 <h5>
-                    Amount
+                    Date
                 </h5>
-                <input type="number" style="width: 100%; height:100%; background-color: #b8b5b5;;" 
-                maxlength="255" class="form-control" 
-                [(ngModel)]="amount"/>
+                <input type="text" style="width: 100%; height:100%; background-color: #b8b5b5;"
+                 maxlength="255" class="form-control" 
+                 [(ngModel)]="Date"/>
                 
             </div>
 
-            <div class="col-12 mt-4">
+            <div class="col-12 mb-2" style="width: 100%; height:100%">
+                <h5>
+                    Time
+                </h5>
+                <input type="text" style="width: 100%; height:100%; background-color: #b8b5b5;"
+                 maxlength="255" class="form-control" 
+                 [(ngModel)]="Time"/>
+                
+            </div>
+
+            <!---<div class="col-12 mt-4">
                 <h5 *ngIf="!data">Add an Image
                 </h5>
                 <h5 *ngIf="data">Edit Image
@@ -53,7 +63,7 @@
                 
                 <img [src]="media" alt="">
                 
-            </div>
+            </div>!--->
 
         </div>
 
