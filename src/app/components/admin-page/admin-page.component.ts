@@ -66,19 +66,17 @@ getFixtures() {
 openAddEditFixtures(data: any){
 
   this.modalService.openAddFixture(data).then((data) => {
-   if(data.id) {
      let post = {
-       name: data.name,
-       price: data.price,
-       amount: data.amount,
-       media: data.media,
+      team1: data.team1,
+      team2: data.team2,
+      date: data.date,
+      time: data.time,
      }
      this.FixtureService.editFixtures(post, data.id).subscribe((data: any)=> {
        console.log("Successfully updated offer");
        this.getFixtures();
      } );
     
-   }
    
  })
  .catch(() => console.log('User dismissed the dialog (e.g., by using ESC, clicking the cross icon, or clicking outside the dialog)'));
