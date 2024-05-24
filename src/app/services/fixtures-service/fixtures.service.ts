@@ -28,13 +28,13 @@ export class FixturesService {
   public deleteFixtures(id: any) : Observable<any>{
     const headers = new HttpHeaders();
     headers.set('Content-Type', 'application/json; charset=utf-8');  
-    return this.httpClient.delete(this.API_SERVER + '/deleteOffers.php/'+id,{headers: headers});
+    return this.httpClient.delete(this.API_SERVER + '/deleteFixtures.php/'+id,{headers: headers});
   }
 
   public editFixtures(data:any, id:any): Observable<any>{
     const headers = new HttpHeaders();
     headers.set('Content-Type', 'application/json; charset=utf-8');  
-    return this.httpClient.put(this.API_SERVER + '/updateOffers.php/'+id, data,{headers: headers});
+    return this.httpClient.put(this.API_SERVER + '/updateFixtures.php/'+id, data,{headers: headers});
 
   }
 

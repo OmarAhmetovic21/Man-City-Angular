@@ -44,6 +44,17 @@ objectData: any;
     this.router.navigateByUrl('/' + page);
 }
 
+deleteFixtures(id: any) {
+  if(confirm("Are you sure you want to delete this offer")) {
+    console.log("Implement delete functionality here");
+    this.FixtureService.deleteFixtures(id).subscribe((data: any) => {
+      this.getFixtures();
+    });
+  }
+  
+
+}
+
 getFixtures() {
   this.FixtureService.getFixtures().subscribe((data: any) => {
     // resp.json().data
@@ -52,10 +63,10 @@ getFixtures() {
   })
 }
 
-openAddEditFixtures(/*data: any*/){
+openAddEditFixtures(data: any){
 
-  this.modalService.openAddFixture(/*data*/).then((data) => {
-   /*if(data.id) {
+  this.modalService.openAddFixture(data).then((data) => {
+   if(data.id) {
      let post = {
        name: data.name,
        price: data.price,
@@ -67,16 +78,26 @@ openAddEditFixtures(/*data: any*/){
        this.getFixtures();
      } );
     
-   } else {*/
-     this.FixtureService.postFixtures(data).subscribe((data: any)=> {
-       console.log("Successfully added offer");
-       this.getFixtures();
-     } );
-   //}
+   }
    
  })
  .catch(() => console.log('User dismissed the dialog (e.g., by using ESC, clicking the cross icon, or clicking outside the dialog)'));
 
    }
+
+   openAddFixtureModal(){
+    this.modalService.openAddFixtureModal().then((data) => {
+
+      this.FixtureService.postFixtures(data).subscribe((data: any)=> {
+        console.log("Successfully added offer");
+        this.getFixtures();
+      } );
+
+  })
+  .catch(() => console.log('User dismissed the dialog (e.g., by using ESC, clicking the cross icon, or clicking outside the dialog)'));
+ 
+   }
+
+
 
 }

@@ -9,13 +9,23 @@ export class ModalService {
 
   constructor(private modalService: NgbModal) { }
 
-  public openAddFixture(/*data: any*/){
+  public openAddFixture(data: any){
     const modalRef = this.modalService.open(AddFixtureComponent,
       {
         scrollable: true,
         windowClass: 'myCustomModalClass',
       });
-      //modalRef.componentInstance.data = data;
+      modalRef.componentInstance.data = data;
+      return modalRef.result;
+  }
+
+  public openAddFixtureModal(){
+    const modalRef = this.modalService.open(AddFixtureComponent,
+      {
+        scrollable: true,
+        windowClass: 'myCustomModalClass',
+      });
+
       return modalRef.result;
   }
 }
